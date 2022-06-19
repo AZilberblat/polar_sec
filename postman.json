@@ -1,0 +1,151 @@
+{
+    "info": {
+        "_postman_id": "807e1ffe-dc67-4fc4-926c-9e42be5fe13b",
+        "name": "Polar-sec-task",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "9745617"
+    },
+    "item": [
+        {
+            "name": "Signup",
+            "request": {
+                "auth": {
+                    "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"age\": 31,\r\n    \"city\": \"New York\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{Base URL}}/signup",
+                    "host": [
+                        "{{Base URL}}"
+                    ],
+                    "path": [
+                        "signup"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "API Specification",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{Base URL}}",
+                    "host": [
+                        "{{Base URL}}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "{{BEARER_TOKEN}}",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"userID\": \"e33f50aa-e07e-4b73-b836-bff317659235\",\r\n    \"distance\": 10\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{Base URL}}/update",
+                    "host": [
+                        "{{Base URL}}"
+                    ],
+                    "path": [
+                        "update"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Return User Stats",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "{{BEARER_TOKEN}}",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"userID\": \"4aaeab2a-91d8-4046-80ae-da182be2d0c8\",\r\n    \"type\": \"overall\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{Base URL}}/mystats",
+                    "host": [
+                        "{{Base URL}}"
+                    ],
+                    "path": [
+                        "mystats"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Re-Authenticate",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"refresh_token\": \"AIwUaOl0foLk914JGT8m80ZO46mt-NDHLRdyxOxMOQ1iNRW_HlYdj1BcEe2hpxERUB1fusMyDMKKgPftidcXtRglVApBckSTFUw7wdslfSCAZ-ROEuSRSQFr5_zKf6q1RotEwIk2YGIIXQfd4s9RvxXQgguIkQzSBVcYRHtAPGgnSx21_KW63VGfHoCje1B3lk2or7Fn2A6Z\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{Base URL}}/reAuthenticate",
+                    "host": [
+                        "{{Base URL}}"
+                    ],
+                    "path": [
+                        "reAuthenticate"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
